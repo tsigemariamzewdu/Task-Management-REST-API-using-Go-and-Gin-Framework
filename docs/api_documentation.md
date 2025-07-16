@@ -134,7 +134,7 @@ http://localhost:8080
 
 ```json
 {
-  "message": "Task deleted successfully"
+  "message": "task deleted "
 }
 ```
 
