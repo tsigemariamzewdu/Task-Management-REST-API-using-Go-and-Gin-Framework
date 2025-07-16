@@ -10,12 +10,10 @@ const (
 	StatusCompleted  TaskStatus = "completed"
 )
 
-
 type Task struct {
-	ID          int    `json:"Id"`
-	Title       string `json:"title"`
-	Description string `json:"description"`
+	ID          int       `json:"id"`
+	Title       string    `json:"title"`
+	Description string    `json:"description"`
 	DueDate     time.Time `json:"dueDate"`
 	Status      TaskStatus
-	
 }
