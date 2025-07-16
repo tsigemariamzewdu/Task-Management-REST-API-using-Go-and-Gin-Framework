@@ -2,15 +2,15 @@ package data
 
 import "task_management/models"
 
-var tasks []models.Task
+var Tasks []models.Task
 
 func GetTasks() []models.Task{ 
-	return tasks
+	return Tasks
 
 }
 
 func GetTaskByID(id int)(models.Task,bool){
-	for _,task := range tasks{
+	for _,task := range Tasks{
 		if task.ID ==id{
 			return task,true
 		}
@@ -22,28 +22,28 @@ func GetTaskByID(id int)(models.Task,bool){
 
 func AddTask(task models.Task) bool {
 	
-	for _, t := range tasks {
+	for _, t := range Tasks {
 		if t.Title == task.Title && t.Description == task.Description {
 			return false 
 		}
 	}
 
 	var maxID int
-	for _, t := range tasks {
+	for _, t := range Tasks {
 		if t.ID > maxID {
 			maxID = t.ID
 		}
 	}
 	task.ID = maxID + 1
 
-	tasks = append(tasks, task)
+	Tasks = append(Tasks, task)
 	return true
 }
 
 func DeleteTaskByID(id int)bool{
-	for i,task := range tasks{
+	for i,task := range Tasks{
 		if task.ID==id{
-			tasks = append(tasks[:i],tasks[i+1:]... )
+			Tasks = append(Tasks[:i],Tasks[i+1:]... )
 			return true
 		}
 
@@ -52,10 +52,10 @@ func DeleteTaskByID(id int)bool{
 	}
 
 func UpdateTaskByID(id int,updatedTask models.Task)bool{
-	for i,task := range tasks{
+	for i,task := range Tasks{
 		if task.ID==id{
 			updatedTask.ID=id
-			tasks[i] = updatedTask
+			Tasks[i] = updatedTask
 			return true
 
 		}

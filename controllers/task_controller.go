@@ -33,7 +33,7 @@ func GetTaskByID(c *gin.Context){
 func AddTask(c *gin.Context){
 	var newTask models.Task
 
-	if err:= c.ShouldBindJSON(newTask);err !=nil{
+	if err:= c.ShouldBindJSON(&newTask);err !=nil{
 		c.IndentedJSON(http.StatusBadRequest,gin.H{"error":err.Error()})
 		return
 	}
