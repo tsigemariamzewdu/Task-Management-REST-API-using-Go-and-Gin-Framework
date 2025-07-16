@@ -150,4 +150,3 @@ The `Status` field must be one of the following values:
 
 ---
 
-Let me know if you'd like it formatted in HTML or Markdown for a specific platform like Swagger, ReDoc, or a GitHub README.
