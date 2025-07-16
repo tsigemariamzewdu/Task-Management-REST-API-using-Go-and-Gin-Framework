@@ -1,38 +1,45 @@
 
-📘 Task Management API Documentation
+---
+
+# 📘 Task Management API Documentation
 
 This API allows users to manage tasks through a RESTful interface. You can create, read, update, and delete tasks. It is built using Go and the Gin framework.
 
+---
 
- 🔗 Published API Documentation
+## 🔗 Published API Documentation
 
 📄 View the full Postman documentation here:
 👉 [https://documenter.getpostman.com/view/39808423/2sB34ijK67]
 
+---
 
-🛠️ How to Run the API
+## 🛠️ How to Run the API
 
-1. Clone the repository
+### 1. **Clone the repository**
 
-
+```bash
 git clone https://github.com/tsigemariamzewdu/Task-Management-REST-API-using-Go-and-Gin-Framework
 
+```
 
+### 2. **Install dependencies**
 
-2. Install dependencies
-
-
+```bash
 go mod tidy
+```
 
-3. Run the server
+### 3. **Run the server**
 
-
+```bash
 go run main.go
+```
 
 By default, the server runs on:
 
+```
 http://localhost:8080
-
+```
 
 ---
 
@@ -74,7 +81,7 @@ http://localhost:8080
   "dueDate": "2025-07-20T23:59:59Z",
   "Status": "in-progress"
 }
-
+```
 
 ---
 
@@ -131,7 +138,7 @@ http://localhost:8080
 }
 ```
 
-
+---
 
 ## 📎 Status Enum
 
@@ -141,4 +148,6 @@ The `Status` field must be one of the following values:
 * `in-progress`
 * `completed`
 
+---
 
+Let me know if you'd like it formatted in HTML or Markdown for a specific platform like Swagger, ReDoc, or a GitHub README.
